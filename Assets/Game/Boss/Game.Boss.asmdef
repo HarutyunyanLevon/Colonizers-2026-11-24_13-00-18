@@ -1,0 +1,17 @@
+{
+    "name": "Game.Boss",
+    "rootNamespace": "Game.Boss",
+    "references": [
+        "Game.Numbers",
+        "Game.Economy"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

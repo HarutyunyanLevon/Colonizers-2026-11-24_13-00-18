@@ -1,0 +1,23 @@
+{
+    "name": "Game.App",
+    "rootNamespace": "Game.App",
+    "references": [
+        "Game.Numbers",
+        "Game.Economy",
+        "Game.Settlers",
+        "Game.World",
+        "Game.Camera",
+        "Game.UI",
+        "Game.Boss",
+        "Game.Save"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

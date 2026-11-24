@@ -1,0 +1,16 @@
+{
+    "name": "Game.Numbers",
+    "rootNamespace": "Game.Numbers",
+    "references": [
+        "ScriptGoblin.NumberForge"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": true
+}
