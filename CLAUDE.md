@@ -72,3 +72,41 @@ The game project's `CLAUDE.md` names its platform on a line **outside** this blo
 | Store builds and submission | `mobile-release-engineer` |
 <!-- unity-gamedev-team:end -->
 
+<!-- dreamer:begin -->
+# ColonizeEarth
+
+Idle/incremental PC game (Steam) in Unity 6000.6.8f1 with URP and DOTS: click to spawn settlers who colonize a visible, hand-authored, alien-feeling Earth.
+Scale (thousands to millions of settlers, seamless zoom) and performance (60 fps minimum at close zoom on the median Steam PC) are the core pillars.
+
+## Design docs (docs/design/)
+- 00-overview.md: pitch, pillars, key facts
+- 01-gdd.md: game design
+- 02-tech-design.md: architecture, data, zoom pipeline, testing
+- 03-roadmap.md: milestones and tasks
+- 04-open-questions.md: TBDs and contradictions
+- 05-assets.md: assets and references
+- CHANGELOG.md: pack history
+
+## Build order
+- Follow docs/design/03-roadmap.md task by task, starting at the first unchecked task.
+- Check the task off (`- [x]`) when its acceptance criteria are met.
+- M1 is the v1 prototype; do not pull in later-milestone features early.
+
+## Rules
+- Do not invent design. Features, mechanics, numbers and story come from the docs only.
+- When a design question blocks you, append it to docs/design/QUESTIONS.md as
+  `- [ ] Q (task id): question — context`, pick the most conservative option and continue.
+- Commit once per task with the task id in the message (e.g. `M1-T3: economy core`).
+- Items under "Ideas under consideration" in 01-gdd.md are not decisions; do not build them.
+- No offline/idle-away progression in the first version.
+- Economy values use the game-owned big-number type; only `Game.Numbers` touches Number Forge.
+- Economy core is plain C#; settlers are ECS.
+- DOTS API: `ISystem`, `IJobEntity`, `SystemAPI.Query`. Do not use `Entities.ForEach`, `Job.WithCode` or Aspects.
+- No Unity Physics for settlers.
+- Debug UI (IMGUI), tuning panel and cheats only in development builds.
+- Keep economy values in tuning data, never hard-coded.
+- Profile close-zoom changes; keep 60 fps minimum on target-class hardware.
+
+## Owner
+C++ developer with about 6 years in gamedev. The project lives in D:\UnityProjects\Colonizers.
+<!-- dreamer:end -->
